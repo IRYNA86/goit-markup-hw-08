@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main-text-color);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  padding-left: 0;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}

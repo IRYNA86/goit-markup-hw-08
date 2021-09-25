@@ -1,0 +1,12 @@
+.peculiarities__main-title {
+  @include font(700, 14px, 1.14);
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-title-color);
+}
+.peculiarities__main-title-org {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
