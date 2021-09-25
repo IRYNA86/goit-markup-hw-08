@@ -37,10 +37,28 @@ ul {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .header {
@@ -253,10 +271,11 @@ ul {
 }
 
 .hero {
-  max-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  max-width: 100%;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  /*background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/imghero.jpg);*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -264,14 +283,39 @@ ul {
   margin-right: auto;
 }
 
+@media screen and (min-widht: 480px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    /*background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/imghero.jpg);*/
+  }
+}
+
+@media screen and (min-widht: 768px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgherot.jpg);
+  }
+}
+
+@media screen and (min-widht: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgherod.jpg);
+  }
+}
+
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   display: block;
   text-align: center;
-  width: 696px;
-  height: 120px;
+  width: 360px;
+  height: 84px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -279,6 +323,36 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-title-colore);
+}
+
+@media screen and (min-widht: 480px) {
+  .hero__title {
+    width: 360px;
+    height: 84px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-widht: 768px) {
+  .hero__title {
+    width: 360px;
+    height: 84px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-widht: 1600px) {
+  .hero__title {
+    width: 696px;
+    height: 120px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {

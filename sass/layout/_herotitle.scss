@@ -1,9 +1,9 @@
 .hero__title {
-  @include font(900, 44px, 1.36);
+  @include font(900, 26px, 1.62);
   display: block;
   text-align: center;
-  width: 696px;
-  height: 120px;
+  width: 360px;
+  height: 84px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -11,4 +11,19 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-title-colore);
+  @media screen and (min-widht: 480px) {
+    width: 360px;
+    height: 84px;
+    @include font(900, 26px, 1.62);
+  }
+  @media screen and (min-widht: 768px) {
+    width: 360px;
+    height: 84px;
+    @include font(900, 26px, 1.62);
+  }
+  @media screen and (min-widht: 1600px) {
+    width: 696px;
+    height: 120px;
+    @include font(900, 44px, 1.36);
+  }
 }
