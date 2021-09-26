@@ -1,37 +1,53 @@
-.projects-list {
+.projects__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin: -15px;
+
+  //   margin-left: -30px;
+  //   margin-top: -30px;
+  //
 }
-.projects-information {
-  .projects-list & {
-    flex-basis: calc(100% / 3-30px);
-    margin-left: 30px;
-    margin-top: 30px;
+.projects__column {
+  margin: 15px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
   }
 }
-.projects-cards {
+// .projects__column {
+//   .projects__list & {
+//     flex-basis: calc(100% / 3-30px);
+//     margin-left: 30px;
+//     margin-top: 30px;
+//   }
+// }
+.projects__cards {
   display: block;
   max-width: 100%;
 }
-.cards-name {
+.projects__cards-name {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  flex-grow: 1;
 }
-.projects-name {
+.projects__name {
   @include font(700, 18px, 2);
   letter-spacing: 0.06em;
   color: var(--second-title-color);
+  margin-bottom: 4px;
+  font-family: inherit;
 }
-.projects-type {
+.projects__type {
   @include font(400, 16px, 1.87);
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  font-family: inherit;
 }
-.projects-information-link {
+.projects__link {
   display: block;
   transition: box-shadow var(--time) var(--timing-function);
   &:hover,
@@ -39,12 +55,16 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    max-height: 100%;
+  }
 }
-.projects-cards-text {
+.projects__text {
   position: relative;
   overflow: hidden;
 }
-.projects-information-text {
+.projects__information-text {
   position: absolute;
   top: 0;
   height: 100%;
@@ -56,7 +76,7 @@
   overflow: auto;
   transform: translateY(100%);
   transition: transform var(--time) var(--timing-function);
-  .projects-information-link:hover & {
+  .projects__link:hover & {
     transform: translateY(0%);
   }
 }

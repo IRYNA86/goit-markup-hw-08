@@ -1,0 +1,124 @@
+.header__menu {
+  position: absolute;
+  top: 22px;
+  right: 23px;
+  border: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.header__menu-icon {
+  width: 24px;
+  height: 16px;
+  transition: fill var(--time) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+.header__mob-menu {
+  // position: relative;
+  width: 480px;
+  /*height: 100vh;*/
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+}
+.mob-menu__open {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  top: 10px;
+  right: 15px;
+}
+.mob-menu__open-modal {
+  width: 19px;
+  height: 19px;
+  fill: var(--second-title-color);
+  cursor: pointer;
+  transition: fill var(--time) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+.mob-menu__list {
+  padding-top: 48px;
+  padding-left: 40px;
+  margin-bottom: 302px;
+}
+.mob-menu__studio {
+  @include font(500, 40px, 1.18);
+  padding-right: 40px;
+  letter-spacing: 0.02em;
+  color: var(--second-title-color);
+  cursor: pointer;
+  transition: color var(--time) var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.mob-menu__portfolio,
+.mob-menu__contact {
+  @include font(500, 40px, 1.18);
+  padding-right: 40px;
+  letter-spacing: 0.02em;
+  color: var(--second-title-color);
+}
+.mob-menu__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: -32px;
+  }
+}
+.contact-menu__list {
+  margin-left: 40px;
+  display: block;
+}
+.contact-menu__link {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: -32px;
+  }
+}
+.contact-menu__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.contact-menu__email {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+.social-menu__list {
+  display: flex;
+  margin-top: 64px;
+  margin-left: 40px;
+  margin-bottom: 48px;
+}
+.social-menu__item {
+  &:last-child {
+    margin-right: -20px;
+  }
+}
+.social-menu__link {
+  display: block;
+  @include font(500, 18px, 1.22);
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-right: 20px;
+}
+.header__mob-menu.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
