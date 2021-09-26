@@ -5,10 +5,12 @@
 .header__list {
   display: flex;
   margin-left: 93px;
+  display: none;
 }
 .header__right {
   display: flex;
   margin-left: auto;
+  display: none;
 }
 .header__item {
   .header__list &:not(:last-child) {

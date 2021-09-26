@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!--<header class="header">
+    <header class="header">
       <div class="container">
         <nav class="header__navigation">
           <a lang="en" href="" class="header__logo-web link"
@@ -55,7 +55,40 @@
           </li>
         </ul>
       </div>
-    </header>-->
+      <button class="header__menu" type="button" data-menu-open>
+        <svg class="header__menu-icon">
+          <use class="menu-icon" href="./images/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <div class="header__mob-menu is-hidden" data-menu>
+        <button type="button" class="mob-menu__open" data-menu-close>
+          <svg class="mob-menu__open-modal">
+            <use class="mob-menu__icon-close" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu__list list">
+          <li class="mob-menu__item">Студия</li>
+          <li class="mob-menu__item">Портфолио</li>
+          <li class="mob-menu__item">Контакты</li>
+        </ul>
+        <ul class="contact-menu__list list">
+          <li class="contact-menu__link">
+            <a class="contact-menu__tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
+          </li>
+          <li class="contact-menu__link">
+            <a class="contact-menu__email link" href="mailto:info@devstudio.com">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="social-menu__list list">
+          <li class="social-menu__link">Instagram</li>
+          <li class="social-menu__link">Twitter</li>
+          <li class="social-menu__link">Facebook</li>
+          <li class="social-menu__link">LinkedIn</li>
+        </ul>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
@@ -130,22 +163,46 @@
           </ul>
         </div>
       </section>-->
-      <!--<section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
-          <ul class="team__worker list">
-            <li class="team__worker-about">
-              <img
+          <ul class="team__list list">
+            <li class="team__column">
+              <picture class="team__picture">
+                <source
+                  srcset="
+                    ./images/team/teamnewdesktop/demyanenko.jpg   1x,
+                    ./images/team/teamnewdesktop/demyanenko2x.jpg 2x
+                  "
+                  media="min-width:1200px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewtablet/demyanenko.jpg   1x,
+                    ./images/team/teamnewtablet/demyanenko2x.jpg 2x
+                  "
+                  media="min-width:768px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewmobile/demyanenko.jpg   1x,
+                    ./images/team/teamnewmobile/demyanenko2x.jpg 2x
+                  "
+                  media="min-width:480px"
+                />
+                <img src="./images/team/teamnewdesktop/demyanenko.jpg" alt="Игорь Демьяненко" />
+              </picture>
+              <!--<img
                 class="cards-workers"
                 src="./images/team/demyanenko.jpg"
                 alt="Игорь Демьяненко"
                 width="270"
                 height="260"
-              />
-              <div class="team__name-function-worker">
-                <h3 class="team__worker-about-name">Игорь Демьяненко</h3>
-                <p class="team__worker-function" lang="en">Product Designer</p>
-                <ul class="team__worker-socials">
+              />-->
+              <div class="team__about">
+                <h3 class="team__name">Игорь Демьяненко</h3>
+                <p class="team__subtitle" lang="en">Product Designer</p>
+                <ul class="team__socials">
                   <li class="team__socials-item list">
                     <a class="team__socials-link link" href="">
                       <svg class="team__socials-icons" width="20" height="20">
@@ -177,18 +234,42 @@
                 </ul>
               </div>
             </li>
-            <li class="team__worker-about">
-              <img
+            <li class="team__column">
+              <picture class="team__picture">
+                <source
+                  srcset="
+                    ./images/team/teamnewdesktop/repina.jpg   1x,
+                    ./images/team/teamnewdesktop/repina2x.jpg 2x
+                  "
+                  media="min-width:1200px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewtablet/repina.jpg   1x,
+                    ./images/team/teamnewtablet/repina2x.jpg 2x
+                  "
+                  media="min-width:768px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewmobile/repina.jpg   1x,
+                    ./images/team/teamnewmobile/repina2x.jpg 2x
+                  "
+                  media="min-width:480px"
+                />
+                <img src="./images/team/teamnewdesktop/repina.jpg" alt="Ольга Репина" />
+              </picture>
+              <!--<img
                 class="cards-workers"
                 src="./images/team/repina.jpg"
                 alt="Ольга Репина"
                 width="270"
                 height="260"
-              />
-              <div class="team__name-function-worker">
-                <h3 class="team__worker-about-name">Ольга Репина</h3>
-                <p class="team__worker-function" lang="en">Frontend Developer</p>
-                <ul class="team__worker-socials">
+              />-->
+              <div class="team__about">
+                <h3 class="team__name">Ольга Репина</h3>
+                <p class="team__subtitle" lang="en">Frontend Developer</p>
+                <ul class="team__socials">
                   <li class="team__socials-item list">
                     <a class="team__socials-link link" href="">
                       <svg class="team__socials-icons" width="20" height="20">
@@ -220,18 +301,42 @@
                 </ul>
               </div>
             </li>
-            <li class="team__worker-about">
-              <img
+            <li class="team__column">
+              <picture class="team__picture">
+                <source
+                  srcset="
+                    ./images/team/teamnewdesktop/tarasov.jpg.jpg 1x,
+                    ./images/team/teamnewdesktop/tarasov2x.jpg   2x
+                  "
+                  media="min-width:1200px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewtablet/tarasov.jpg   1x,
+                    ./images/team/teamnewtablet/tarasov2x.jpg 2x
+                  "
+                  media="min-width:768px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewmobile/tarasov.jpg   1x,
+                    ./images/team/teamnewmobile/tarasov2x.jpg 2x
+                  "
+                  media="min-width:480px"
+                />
+                <img src="./images/team/teamnewdesktop/tarasov.jpg" alt="Николай Тарасов" />
+              </picture>
+              <!--<img
                 class="cards-workers"
                 src="./images/team/tarasov.jpg"
                 alt="Николай Тарасов"
                 width="270"
                 height="260"
-              />
-              <div class="team__name-function-worker">
-                <h3 class="team__worker-about-name">Николай Тарасов</h3>
-                <p class="team__worker-function" lang="en">Marketing</p>
-                <ul class="team__worker-socials">
+              />-->
+              <div class="team__about">
+                <h3 class="team__name">Николай Тарасов</h3>
+                <p class="team__subtitle" lang="en">Marketing</p>
+                <ul class="team__socials">
                   <li class="team__socials-item list">
                     <a class="team__socials-link link" href="">
                       <svg class="team__socials-icons" width="20" height="20">
@@ -263,18 +368,42 @@
                 </ul>
               </div>
             </li>
-            <li class="team__worker-about">
-              <img
+            <li class="team__column">
+              <picture class="team__picture">
+                <source
+                  srcset="
+                    ./images/team/teamnewdesktop/ermakov.jpg.jpg.jpg 1x,
+                    ./images/team/teamnewdesktop/ermakov2x.jpg       2x
+                  "
+                  media="min-width:1200px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewtablet/ermakov.jpg   1x,
+                    ./images/team/teamnewtablet/ermakov2x.jpg 2x
+                  "
+                  media="min-width:768px"
+                />
+                <source
+                  srcset="
+                    ./images/team/teamnewmobile/ermakov.jpg   1x,
+                    ./images/team/teamnewmobile/ermakov2x.jpg 2x
+                  "
+                  media="min-width:480px"
+                />
+                <img src="./images/team/teamnewdesktop/ermakov.jpg" alt="Михаил Ермаков" />
+              </picture>
+              <!--<img
                 class="cards-workers"
                 src="./images/team/ermakov.jpg"
                 alt="Михаил Ермаков"
                 width="270"
                 height="260"
-              />
-              <div class="team__name-function-worker">
-                <h3 class="team__worker-about-name">Михаил Ермаков</h3>
-                <p class="team__worker-function" lang="en">UI Designer</p>
-                <ul class="team__worker-socials">
+              />-->
+              <div class="team__about">
+                <h3 class="team__name">Михаил Ермаков</h3>
+                <p class="team__subtitle" lang="en">UI Designer</p>
+                <ul class="team__socials">
                   <li class="team__socials-item list">
                     <a class="team__socials-link link" href="">
                       <svg class="team__socials-icons" width="20" height="20">
@@ -308,7 +437,7 @@
             </li>
           </ul>
         </div>
-      </section>-->
+      </section>
       <!--<section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
@@ -496,5 +625,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
