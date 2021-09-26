@@ -5,11 +5,18 @@
 .peculiarities__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
+  margin: -15px;
 }
 .peculiarities__main {
-  .peculiarities__list > & {
+  margin: 15px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+  /*.peculiarities__list > & {
     flex-basis: calc(100% / 4 - 30px);
     margin-left: 30px;
-  }
+  }*/
 }

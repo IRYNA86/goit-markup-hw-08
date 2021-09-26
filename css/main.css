@@ -45,19 +45,19 @@ ul {
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -424,40 +424,71 @@ ul {
   margin-right: auto;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imghero2x.jpg);
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgherot.jpg);
+  }
+}
+
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgherot2x.jpg);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgherod.jpg);
+  }
+}
+
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgherod2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+  }
+}
+
 .hero__title {
   /*@include font(900, 20px, 1.62);*/
   font-weight: 900;
-  font-size: 24px;
-  line-height: calc(40 / 24);
-  display: block;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
-  min-width: 340px;
-  min-height: 80px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  justify-content: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-title-colore);
-}
-
-@media screen and (min-widht: 480px) {
-  .hero__title {
+  /*@media screen and (min-widht: 480px) {
     font-size: 26px;
     line-height: calc(42 / 26);
     width: 360px;
     height: 84px;
-    /* @include font(900, 26px, 1.62);*/
-  }
+    /* @include font(900, 26px, 1.62);
+  }*/
 }
 
-@media screen and (min-widht: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
-    line-height: calc(60 / 44);
+    line-height: 1.36;
     width: 696px;
-    height: 120px;
     /*@include font(900, 44px, 1.36);*/
   }
 }
@@ -493,23 +524,38 @@ ul {
 .peculiarities__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
+  margin: -15px;
 }
 
-.peculiarities__list > .peculiarities__main {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
+.peculiarities__main {
+  margin: 15px;
+  /*.peculiarities__list > & {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }*/
+}
+
+@media screen and (min-width: 768px) {
+  .peculiarities__main {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .peculiarities__main {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .peculiarities__icons {
   display: flex;
   height: 120px;
-  width: 270px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   background-color: #f5f4fa;
-  padding: 25px 100px;
+  /*padding: 25px 100px;*/
   margin-bottom: 30px;
 }
 
@@ -525,8 +571,15 @@ ul {
   line-height: 1.14;
   margin-bottom: 10px;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--second-title-color);
+}
+
+@media screen and (min-width: 768px) {
+  .peculiarities__main-title {
+    text-align: left;
+  }
 }
 
 .peculiarities__main-title-org {
@@ -736,18 +789,38 @@ ul {
 .team__list {
   /*max-width: 100%;
   display: flex;*/
+  display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: -15px;
 }
 
 .team__column {
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .team__column {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__column {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
+.team__column {
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team__list .team__column:not(:first-child) {
-  margin-left: 30px;
+.team__picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .team__about {
@@ -904,173 +977,52 @@ ul {
 
 .clients__icons {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-.clients__icons > .clients__icons-cards:not(:first-child) {
-  margin-left: 30px;
+.clients__icons-cards {
+  flex-basis: calc(100% / 2 - 30px);
+  margin: 15px;
+  height: 92px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__icons-cards {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__icons-cards {
+    flex-basis: calc(100% / 6 - 30px);
+  }
 }
 
 .clients__icons-number {
-  display: block;
-  width: 170px;
-  height: 92px;
-  padding: 16px 32px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #afb1b8;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
-  transition: border-color var(--time) var(--timing-function);
+  color: #afb1b8;
 }
 
 .clients__icons-number:hover, .clients__icons-number:focus {
   border-color: var(--accent-color);
-}
-
-.one,
-.two,
-.three,
-.four,
-.five,
-.six {
-  transition: fill var(--time) var(--timing-function);
-}
-
-.clients__icons-number:hover .one,
-.clients__icons-number:hover .one,
-.clients__icons-number:hover .one,
-.clients__icons-number:hover .one,
-.clients__icons-number:hover .one,
-.clients__icons-number:hover .one,
-.clients__icons-number:focus .one,
-.clients__icons-number:focus .one,
-.clients__icons-number:focus .one,
-.clients__icons-number:focus .one,
-.clients__icons-number:focus .one,
-.clients__icons-number:focus .one, .clients__icons-number:hover
-.two,
-.clients__icons-number:hover
-.two,
-.clients__icons-number:hover
-.two,
-.clients__icons-number:hover
-.two,
-.clients__icons-number:hover
-.two,
-.clients__icons-number:hover
-.two,
-.clients__icons-number:focus
-.two,
-.clients__icons-number:focus
-.two,
-.clients__icons-number:focus
-.two,
-.clients__icons-number:focus
-.two,
-.clients__icons-number:focus
-.two,
-.clients__icons-number:focus
-.two, .clients__icons-number:hover
-.three,
-.clients__icons-number:hover
-.three,
-.clients__icons-number:hover
-.three,
-.clients__icons-number:hover
-.three,
-.clients__icons-number:hover
-.three,
-.clients__icons-number:hover
-.three,
-.clients__icons-number:focus
-.three,
-.clients__icons-number:focus
-.three,
-.clients__icons-number:focus
-.three,
-.clients__icons-number:focus
-.three,
-.clients__icons-number:focus
-.three,
-.clients__icons-number:focus
-.three, .clients__icons-number:hover
-.four,
-.clients__icons-number:hover
-.four,
-.clients__icons-number:hover
-.four,
-.clients__icons-number:hover
-.four,
-.clients__icons-number:hover
-.four,
-.clients__icons-number:hover
-.four,
-.clients__icons-number:focus
-.four,
-.clients__icons-number:focus
-.four,
-.clients__icons-number:focus
-.four,
-.clients__icons-number:focus
-.four,
-.clients__icons-number:focus
-.four,
-.clients__icons-number:focus
-.four, .clients__icons-number:hover
-.five,
-.clients__icons-number:hover
-.five,
-.clients__icons-number:hover
-.five,
-.clients__icons-number:hover
-.five,
-.clients__icons-number:hover
-.five,
-.clients__icons-number:hover
-.five,
-.clients__icons-number:focus
-.five,
-.clients__icons-number:focus
-.five,
-.clients__icons-number:focus
-.five,
-.clients__icons-number:focus
-.five,
-.clients__icons-number:focus
-.five,
-.clients__icons-number:focus
-.five, .clients__icons-number:hover
-.six,
-.clients__icons-number:hover
-.six,
-.clients__icons-number:hover
-.six,
-.clients__icons-number:hover
-.six,
-.clients__icons-number:hover
-.six,
-.clients__icons-number:hover
-.six,
-.clients__icons-number:focus
-.six,
-.clients__icons-number:focus
-.six,
-.clients__icons-number:focus
-.six,
-.clients__icons-number:focus
-.six,
-.clients__icons-number:focus
-.six,
-.clients__icons-number:focus
-.six {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .clients__icons-number-cards {
-  display: block;
+  fill: currentColor;
+}
+
+.clients__icons-number-cards {
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
 }
 
 .footer {
