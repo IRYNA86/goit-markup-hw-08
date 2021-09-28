@@ -1344,6 +1344,8 @@ ul {
   height: 100vh;
   width: 100vw;
   top: 0;
+  overflow-y: scroll;
+  z-index: 999;
   background-color: rgba(23, 26, 36, 0.2);
   transition: opacity var(--time) var(--timing-function), visibility var(--time) var(--timing-function);
 }
@@ -1668,6 +1670,12 @@ ul {
   top: 0;
   right: 0;
   padding: 10px 15px 48px 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__mob-menu {
+    display: none;
+  }
 }
 
 .mob-menu__open {

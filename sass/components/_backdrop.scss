@@ -3,6 +3,8 @@
   height: 100vh;
   width: 100vw;
   top: 0;
+  overflow-y: scroll;
+  z-index: 999;
   background-color: rgba(23, 26, 36, 0.2);
   transition: opacity var(--time) var(--timing-function),
     visibility var(--time) var(--timing-function);
