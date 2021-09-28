@@ -9,12 +9,15 @@
 }
 .footer__logo-web {
   font-family: Raleway;
-  @include font(700, 26px, 1.19);
+  @include font(700, 24px, 1.17);
   /*font-weight: 700;
   font-size: 26px;
   line-height: 1.19;*/
   letter-spacing: 0.03em;
   color: #2196f3;
+  @media screen and (min-width: 1200px) {
+    @include font(700, 26px, 1.19);
+  }
 }
 .footer__logo-studio {
   font-family: Raleway;
@@ -22,9 +25,20 @@
   letter-spacing: 0.03em;
   color: #ffffff;
 }
+.footer__item {
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
 .footer__adress {
   font-style: normal;
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 60px;
+  }
 }
+
 .footer__adress-map {
   @include font(400, 14px, 1.71);
   /*font-size: 14px;
@@ -47,11 +61,22 @@
   color: rgba(255, 255, 255, 0.6);
 }
 .footer__logo-together {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    text-align: left;
+  }
 }
 .footer-together {
-  margin-left: 70px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 .footer-together__title {
   @include font(700, 14px, 1.14);
@@ -62,6 +87,11 @@
 }
 .footer-together__socials {
   display: flex;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
 }
 .footer-together__item:not(:first-child) {
   margin-left: 10px;
@@ -77,7 +107,6 @@
   background-color: #ffffff1a;
   width: 44px;
   height: 44px;
-  justify-content: center;
   transition: background-color var(--time) var(--timing-function);
   &:hover,
   &:focus {
@@ -85,7 +114,9 @@
   }
 }
 .footer-subscribe {
-  margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 .footer-subscribe__text {
   margin-bottom: 20px;
@@ -95,10 +126,12 @@
   color: var(--main-title-colore);
 }
 .footer-subscribe__contact {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .footer-subscribe__email {
-  width: 358px;
+  width: 480px;
   height: 50px;
   @include font(400, 16px, 1.25);
   display: flex;
@@ -115,11 +148,21 @@
     border-color: var(--accent-color);
     outline: none;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 .footer-subscribe__button {
   width: 200px;
   height: 50px;
-  margin-left: 12px;
+  margin: 0 auto;
   @include font(700, 16px, 1.87);
   display: flex;
   align-items: center;
@@ -132,6 +175,9 @@
   padding: 10px 28px 10px 29px;
   cursor: pointer;
   border: none;
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 .footer-subscribe__icons {
   margin-left: 10px;

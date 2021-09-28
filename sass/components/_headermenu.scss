@@ -1,15 +1,42 @@
 .header__menu {
-  position: absolute;
-  top: 22px;
-  right: 23px;
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   border: none;
+  width: 40px;
+  height: 40px;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
+
 .header__menu-icon {
-  width: 24px;
-  height: 16px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  // top: 0px;
+  // left: 0px;
+  transition: fill var(--time) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+.menu-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: fill var(--time) var(--timing-function);
   &:hover,
   &:focus {
@@ -17,13 +44,13 @@
   }
 }
 .header__mob-menu {
-  // position: relative;
-  width: 480px;
-  /*height: 100vh;*/
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   background-color: #ffffff;
   top: 0;
-  right: 0;
+  left: 0;
 }
 .mob-menu__open {
   position: absolute;
@@ -68,6 +95,11 @@
   padding-right: 40px;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
+  transition: color var(--time) var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .mob-menu__item {
   margin-bottom: 32px;

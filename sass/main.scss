@@ -2,10 +2,6 @@
 @import './base/reset';
 @import './utills/mixins';
 @import './layout/header';
-@import './layout/headerlogo';
-@import './layout/headernavright';
-@import './layout/headernavleft';
-@import './layout/headermenu';
 @import './layout/hero';
 @import './layout/herotitle';
 @import './layout/herobutton';
@@ -20,3 +16,4 @@
 @import './layout/footer';
 @import './components/backdrop';
 @import './components/modal';
+@import './components/headermenu';

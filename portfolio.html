@@ -125,20 +125,40 @@
             <li class="projects__column">
               <a class="projects__link link" href="">
                 <div class="projects__text">
-                  <img
-                    class="projects__cards"
-                    src="./imgportfolio/tehnokryak.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture class="projects__cards">
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./imgportfolio/tehnokryakd.jpg   1x,
+                        ./imgportfolio/tehnokryakd2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./imgportfolio/tehnokryakt.jpg   1x,
+                        ./imgportfolio/tehnokryakt2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 480px)"
+                      srcset="
+                        ./imgportfolio/tehnokryakm.jpg   1x,
+                        ./imgportfolio/tehnokryakm2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img src="./imgportfolio/tehnokryakm.jpg" alt="Технокряк" />
+                  </picture>
                   <p class="projects__information-text">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
                     конкурентов.
                   </p>
                 </div>
-                <div class="projects__cards-name">
+                <div class="projects__cards-tehnokryak">
                   <h3 class="projects__name">Технокряк</h3>
                   <p class="projects__type">Веб-сайт</p>
                 </div>
@@ -146,13 +166,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/star.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./imgportfolio/stard.jpg 1x, ./imgportfolio/stard2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/start.jpg 1x, ./imgportfolio/start2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/starm.jpg 1x, ./imgportfolio/starm2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/starm.jpg" alt="Постер New Orlean vs Golden Sta" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name">
                     Постер <span lang="en">New Orlean vs Golden Star</span>
@@ -163,13 +194,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/seafood.jpg"
-                  alt="Ресторан Seafood"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="/imgportfolio/seafoodd.jpg 1x, ./imgportfolio/seafoodd2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/seafoodt.jpg 1x, ./imgportfolio/seafoodt2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/seafoodm.jpg 1x, ./imgportfolio/seafoodm2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/seafoodm.jpg" alt="Ресторан Seafood" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name">Ресторан <span lang="en">Seafood</span></h3>
                   <p class="projects__type">Приложение</p>
@@ -178,13 +220,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/prime.jpg"
-                  alt="Проект Prime"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./imgportfolio/primed.jpg 1x, ./imgportfolio/primed2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/primet.jpg 1x, ./imgportfolio/primet2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/primem.jpg 1x, ./imgportfolio/primem2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/primem.jpg" alt="Проект Prime" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name">Проект <span lang="en">Prime</span></h3>
                   <p class="projects__type">Маркетинг</p>
@@ -193,13 +246,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/boxes.jpg"
-                  alt="Проект Boxes"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./imgportfolio/boxesd.jpg 1x, ./imgportfolio/boxesd2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/boxest.jpg 1x, ./imgportfolio/boxest2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/boxesm.jpg 1x, ./imgportfolio/boxesm2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/boxesm.jpg" alt="Проект Boxes" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name">Проект <span lang="en">Boxes</span></h3>
                   <p class="projects__type">Приложение</p>
@@ -208,13 +272,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/borders.jpg"
-                  alt="Inspiration has no Borders"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./imgportfolio/bordersd.jpg 1x, ./imgportfolio/bordersd2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/borderst.jpg 1x, ./imgportfolio/borderst2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/bordersm.jpg 1x, ./imgportfolio/bordersm2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/bordersm.jpg" alt="Inspiration has no Borders" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name" lang="en">Inspiration has no Borders</h3>
                   <p class="projects__type">Веб-сайт</p>
@@ -223,13 +298,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/edition.jpg"
-                  alt="Издание Limited Edition"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./imgportfolio/editiond.jpg 1x, ./imgportfolio/editiond2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/editiont.jpg 1x, ./imgportfolio/editiont2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/editionm.jpg 1x, ./imgportfolio/editionm2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/editionm.jpg" alt="Издание Limited Edition" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name">Издание <span lang="en">Limited Edition</span></h3>
                   <p class="projects__type">Дизайн</p>
@@ -238,13 +324,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/lab.jpg"
-                  alt="Проект LAB"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./imgportfolio/labd.jpg 1x, ./imgportfolio/labd2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/labt.jpg 1x, ./imgportfolio/labt2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/labm.jpg 1x, ./imgportfolio/labm2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/labm.jpg" alt="Проект LAB" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name">Проект <span lang="en">LAB</span></h3>
                   <p class="projects__type">Маркетинг</p>
@@ -253,13 +350,24 @@
             </li>
             <li class="projects__column">
               <a class="projects__link link" href="">
-                <img
-                  class="projects__cards"
-                  src="./imgportfolio/business.jpg"
-                  alt="Growing Business"
-                  width="370"
-                  height="294"
-                />
+                <picture class="projects__cards">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="../imgportfolio/businessd.jpg 1x, ./imgportfolio/businessd2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./imgportfolio/businesst.jpg 1x, ./imgportfolio/businesst2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 480px)"
+                    srcset="./imgportfolio/businessm.jpg 1x, ./imgportfolio/businessm2x.jpg 2x"
+                    type="image/jpeg"
+                  />
+                  <img src="./imgportfolio/businessm.jpg" alt="Growing Business" />
+                </picture>
                 <div class="projects__cards-name">
                   <h3 class="projects__name" lang="en">Growing Business</h3>
                   <p class="projects__type">Приложение</p>
@@ -270,7 +378,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer__logo-together container">
         <div class="footer__logo">
           <a lang="en" href="" class="footer__logo-web link"
@@ -344,7 +452,7 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script src="./js/menu.js"></script>
   </body>
 </html>

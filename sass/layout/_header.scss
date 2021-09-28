@@ -42,19 +42,36 @@
     @include font(700, 31px, 1.19);
   }
 }
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
 .header__navigation {
   display: flex;
   align-items: center;
 }
 .header__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   display: flex;
-  margin-left: 93px;
-  display: none;
+  margin-left: 88px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 .header__right {
-  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
   margin-left: auto;
-  display: none;
 }
 .header__item {
   .header__list &:not(:last-child) {
@@ -67,8 +84,10 @@
   }
 }
 .header__right-item {
-  .header__right & + & {
-    margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    .header__right & + & {
+      margin-left: 50px;
+    }
   }
 }
 .header__studio {
@@ -82,7 +101,7 @@
     content: '';
     position: absolute;
     left: 0px;
-    bottom: -1px;
+    bottom: -4px;
     display: block;
     width: 100%;
     height: 4px;
@@ -148,6 +167,10 @@
   .header__email:hover &,
   .header__email:focus & {
     fill: var(--accent-color);
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
   }
 }
 .icons__smartphone {
@@ -158,35 +181,51 @@
   .header__tel:focus & {
     fill: var(--accent-color);
   }
+  @media screen and (min-width: 1200px) {
+    height: 16px;
+  }
 }
 .header__icons {
-  margin-right: 10px;
+  margin-right: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
 }
 .header__email {
   display: flex;
   align-items: center;
-  @include font(500, 14px, 1.14);
+  @include font(500, 12px, 1.17);
   letter-spacing: 0.02em;
   color: #757575;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 21px;
+  margin-bottom: 10px;
   transition: color var(--time) var(--timing-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font(500, 14px, 1.14);
+    margin-bottom: 0px;
+  }
 }
 .header__tel {
   display: flex;
   align-items: center;
-  @include font(500, 14px, 1.14);
+  @include font(500, 12px, 1.17);
   letter-spacing: 0.02em;
   color: #757575;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 21px;
   transition: color var(--time) var(--timing-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font(500, 14px, 1.14);
   }
 }

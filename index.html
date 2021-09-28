@@ -23,7 +23,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container main-nav">
         <nav class="header__navigation">
           <a lang="en" href="" class="header__logo-web link"
             >Web<span class="header__logo-studio link">Studio</span>
@@ -39,7 +39,7 @@
         <ul class="header__right list">
           <li class="header__right-item">
             <a class="header__email link" href="mailto:info@devstudio.com">
-              <svg class="header__icons" width="16" height="12">
+              <svg class="header__icons" width="14" height="10">
                 <use class="icons__envelope" href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -47,19 +47,19 @@
           </li>
           <li class="header__right-item">
             <a class="header__tel link" href="tel:+380961111111">
-              <svg class="header__icons" width="10" height="16">
+              <svg class="header__icons" width="10" height="14">
                 <use class="icons__smartphone" href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button class="header__menu" type="button" data-menu-open>
+          <svg class="header__menu-icon">
+            <use class="menu-icon" width="24" height="16" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-      <button class="header__menu" type="button" data-menu-open>
-        <svg class="header__menu-icon">
-          <use class="menu-icon" href="./images/icons.svg#icon-menu"></use>
-        </svg>
-      </button>
       <div class="header__mob-menu is-hidden" data-menu>
         <button type="button" class="mob-menu__open" data-menu-close>
           <svg class="mob-menu__open-modal">
@@ -67,7 +67,9 @@
           </svg>
         </button>
         <ul class="mob-menu__list list">
-          <li class="mob-menu__item"><a class="mob-menu__studio link" href="">Студия</a></li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__studio link" href="./index.html">Студия</a>
+          </li>
           <li class="mob-menu__item">
             <a class="mob-menu__portfolio link" href="./portfolio.html">Портфолио</a>
           </li>
@@ -154,8 +156,7 @@
           </ul>
         </div>
       </section>
-      -->
-      <!--<section class="doing">
+      <section class="doing making">
         <div class="container">
           <h2 class="doing__title">Чем мы занимаемся</h2>
           <ul class="doing__image list">
@@ -173,7 +174,7 @@
             </li>
           </ul>
         </div>
-      </section>--->
+      </section>
       <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
@@ -447,7 +448,7 @@
         </div>
       </section>
     </main>
-    <!--<footer class="footer">
+    <footer class="footer">
       <div class="footer__logo-together container">
         <div class="footer__logo">
           <a lang="en" href="" class="footer__logo-web link"
@@ -521,7 +522,7 @@
           </div>
         </div>
       </div>
-    </footer>-->
+    </footer>
     <div class="backdrop is-hidden" data-modal is-hidden>
       <div class="modal">
         <button type="button" class="modal__open" data-modal-close>

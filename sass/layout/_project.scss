@@ -28,11 +28,12 @@
   max-width: 100%;
 }
 .projects__cards-name {
+  display: block;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
-  flex-grow: 1;
+  // flex-grow: 1;
 }
 .projects__name {
   @include font(700, 18px, 2);
@@ -48,7 +49,8 @@
   font-family: inherit;
 }
 .projects__link {
-  display: block;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow var(--time) var(--timing-function);
   &:hover,
   &:focus {
@@ -56,8 +58,19 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
   @media screen and (min-width: 768px) {
-    flex-direction: column;
-    max-height: 100%;
+  }
+}
+.projects__cards-tehnokryak {
+  display: block;
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  @media screen and (min-width: 768px) {
+    padding: 20px 24px 56px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 20px 24px;
   }
 }
 .projects__text {
