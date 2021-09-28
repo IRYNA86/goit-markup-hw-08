@@ -160,6 +160,14 @@
     color: var(--accent-color);
   }
 }
+.header__right-item {
+  display: block;
+  @media screen and (max-width: 1199px) {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
 .icons__envelope {
   display: block;
   fill: var(--main-text-color);
@@ -197,8 +205,8 @@
   @include font(500, 12px, 1.17);
   letter-spacing: 0.02em;
   color: #757575;
-  padding-top: 21px;
-  margin-bottom: 10px;
+  // padding-top: 21px;
+  // margin-bottom: 10px;
   transition: color var(--time) var(--timing-function);
   &:hover,
   &:focus {
@@ -217,7 +225,7 @@
   @include font(500, 12px, 1.17);
   letter-spacing: 0.02em;
   color: #757575;
-  padding-bottom: 21px;
+  // padding-bottom: 21px;
   transition: color var(--time) var(--timing-function);
   &:hover,
   &:focus {

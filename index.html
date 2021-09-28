@@ -72,39 +72,52 @@
               <use class="mob-menu__icon-close" href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
-          <ul class="mob-menu__list list">
-            <li class="mob-menu__item">
-              <a class="mob-menu__studio link" href="./index.html">Студия</a>
-            </li>
-            <li class="mob-menu__item">
-              <a class="mob-menu__portfolio link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="mob-menu__item"><a class="mob-menu__contact link" href="">Контакты</a></li>
-          </ul>
-          <ul class="contact-menu__list list">
-            <li class="contact-menu__link">
-              <a class="contact-menu__tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
-            </li>
-            <li class="contact-menu__link">
-              <a class="contact-menu__email link" href="mailto:info@devstudio.com">
-                info@devstudio.com</a
-              >
-            </li>
-          </ul>
-          <ul class="social-menu__list list">
-            <li class="social-menu__item">
-              <a class="social-menu__link link" href="Instagram">Instagram</a>
-            </li>
-            <li class="social-menu__ltem">
-              <a class="social-menu__link link" href="Twitter">Twitter</a>
-            </li>
-            <li class="social-menu__item">
-              <a class="social-menu__link link" href="Facebook">Facebook</a>
-            </li>
-            <li class="social-menu__item">
-              <a class="social-menu__link link" href="LinkedIn">LinkedIn</a>
-            </li>
-          </ul>
+          <div class="mob-menu__all">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__studio-color link" href="./index.html">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__portfolio link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mob-menu__item"><a class="mob-menu__contact link" href="">Контакты</a></li>
+            </ul>
+            <div>
+              <ul class="contact-menu__list list">
+                <li class="contact-menu__link">
+                  <a class="contact-menu__tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
+                </li>
+                <li class="contact-menu__link">
+                  <a class="contact-menu__email link" href="mailto:info@devstudio.com">
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="social-menu__list list">
+                <li class="social-menu__item">
+                  <a class="social-menu__link link" href="Instagram">Instagram</a>
+                </li>
+                <li class="social-menu__item">
+                  <svg class="social-menu__icon" width="22" height="0">
+                    <use class="social-menu__icon-line" href="./images/icons.svg#icon-Line"></use>
+                  </svg>
+                  <a class="social-menu__link link" href="Twitter">Twitter</a>
+                </li>
+                <li class="social-menu__item">
+                  <svg class="social-menu__icon" width="22" height="0">
+                    <use class="social-menu__icon-line" href="./images/icons.svg#icon-Line"></use>
+                  </svg>
+                  <a class="social-menu__link link" href="Facebook">Facebook</a>
+                </li>
+                <li class="social-menu__item">
+                  <svg class="social-menu__icon" width="22" height="0">
+                    <use class="social-menu__icon-line" href="./images/icons.svg#icon-Line"></use>
+                  </svg>
+                  <a class="social-menu__link link" href="LinkedIn">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -168,15 +181,47 @@
           <h2 class="doing__title">Чем мы занимаемся</h2>
           <ul class="doing__image list">
             <li class="doing__image-pictures">
-              <img src="./images/doing/img1.jpg" alt="Разработка сайта" width="370" height="294" />
+              <picture class="">
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/doing/img1norm.jpg 1x, ./images/doing/img12x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/doing/img1norm.jpg"
+                  alt="Разработка сайта"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <h3 class="doing__kind">Десктопные приложения</h3>
             </li>
             <li class="doing__image-pictures">
-              <img src="./images/doing/img2.jpg" alt="Дизайн" width="370" height="294" />
+              <picture class="">
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/doing/img2norm.jpg 1x, ./images/doing/img22x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img src=".//images/doing/img2norm.jpg" alt="Дизайн" width="370" height="294" />
+              </picture>
               <h3 class="doing__kind">Мобильные приложения</h3>
             </li>
             <li class="doing__image-pictures">
-              <img src="./images/doing/img3.jpg" alt="Графика и цвет" width="370" height="294" />
+              <picture class="">
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/doing/img3norm.jpg 1x, ./images/doing/img32x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/doing/img3norm.jpg"
+                  alt="Графика и цвет"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <h3 class="doing__kind">Дизайнерские решения</h3>
             </li>
           </ul>

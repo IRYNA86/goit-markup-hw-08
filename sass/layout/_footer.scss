@@ -3,6 +3,11 @@
   padding-bottom: 60px;
   background-color: #2f303a;
 }
+.footer__logo {
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 60px;
+  }
+}
 .footer__logo-web {
   display: block;
   margin-bottom: 20px;
@@ -34,9 +39,9 @@
 }
 .footer__adress {
   font-style: normal;
-  @media screen and (max-width: 1200px) {
-    margin-bottom: 60px;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   margin-bottom: 60px;
+  // }
 }
 
 .footer__adress-map {
@@ -74,6 +79,9 @@
   }
 }
 .footer-together {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }
@@ -90,7 +98,7 @@
   @media screen and (max-width: 767px) {
     text-align: center;
     justify-content: center;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
 }
 .footer-together__item:not(:first-child) {
@@ -131,7 +139,7 @@
   }
 }
 .footer-subscribe__email {
-  width: 480px;
+  width: 450px;
   height: 50px;
   @include font(400, 16px, 1.25);
   display: flex;
@@ -147,10 +155,6 @@
   &:focus-within {
     border-color: var(--accent-color);
     outline: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 450px;
   }
   @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
