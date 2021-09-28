@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 10px 15px 10px 0;
   padding: 0;
   border: none;
   width: 40px;
@@ -11,26 +11,39 @@
   font-family: inherit;
   background-color: transparent;
   cursor: pointer;
+  transition: fill var(--time) var(--timing-function);
   @media screen and (min-width: 768px) {
     display: none;
   }
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
-
+.header__menu .mob-menu__icon-close {
+  display: none;
+}
+.header__menu.is-open .mob-menu__icon-close {
+  display: block;
+}
+.header__menu.is-open menu-icon {
+  display: none;
+}
 .header__menu-icon {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  // width: 40px;
+  // height: 40px;
   cursor: pointer;
   // top: 0px;
   // left: 0px;
-  transition: fill var(--time) var(--timing-function);
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
+  // transition: fill var(--time) var(--timing-function);
+  // &:hover,
+  // &:focus {
+  //   fill: var(--accent-color);
+  // }
 }
 .menu-icon {
   position: absolute;
@@ -44,26 +57,29 @@
   }
 }
 .header__mob-menu {
-  position: relative;
+  // position: relative;
   width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: 999;
   background-color: #ffffff;
   top: 0;
-  left: 0;
+  right: 0;
+  padding: 10px 15px 48px 40px;
 }
 .mob-menu__open {
-  position: absolute;
+  // position: absolute;
+  display: block;
   width: 40px;
   height: 40px;
   border: none;
   background-color: transparent;
-  top: 10px;
-  right: 15px;
+  margin-left: auto;
+  margin-right: 15px;
 }
 .mob-menu__open-modal {
-  width: 19px;
-  height: 19px;
+  width: 35px;
+  height: 35px;
   fill: var(--second-title-color);
   cursor: pointer;
   transition: fill var(--time) var(--timing-function);
@@ -79,7 +95,7 @@
 }
 .mob-menu__studio {
   @include font(500, 40px, 1.18);
-  padding-right: 40px;
+  // padding-right: 40px;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
   cursor: pointer;
@@ -92,7 +108,7 @@
 .mob-menu__portfolio,
 .mob-menu__contact {
   @include font(500, 40px, 1.18);
-  padding-right: 40px;
+  // padding-right: 40px;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
   transition: color var(--time) var(--timing-function);
